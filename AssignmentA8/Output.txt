@@ -1,0 +1,37 @@
+PS D:\Users\jayja\Desktop\github\CN> & python d:/Users/jayja/Desktop/github/CN/AssignmentA8/DNSlookup.py
+Enter Choice:
+1. Name to address
+2. Address to Name
+3. nsLookup
+1
+
+Enter name of host : google.com
+Address is :  172.217.160.206
+Enter Choice:
+1. Name to address
+2. Address to Name
+3. nsLookup
+2
+Enter address of host : 172.217.160.206
+Name is :  ('bom07s16-in-f14.1e100.net', [], ['172.217.160.206'])
+Enter Choice:
+1. Name to address
+2. Address to Name
+3. nsLookup
+3
+Enter host name or address : google.com
+Server:  UnKnown
+Address:  150.129.130.254
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2404:6800:4009:80b::200e
+          172.217.160.206
+
+Enter Choice:
+1. Name to address
+2. Address to Name
+3. nsLookup
+4
+
+PS D:\Users\jayja\Desktop\github\CN>

@@ -1,0 +1,21 @@
+Big,Light blue instrument is Crimper.
+		Use the extremely ahead slot, the one furthest away from the hand, to crimp. insert the rj45 from the side
+		stuff is written on the crimper, and keep it inside till it's end is visible through the back of the crimper
+
+Smaller, Dark Blue instrument is Cutter.
+		Use the extremely behind, single razor to cut objects, the razor near to your hand.
+		Use the front razor, the one containing two razors on either side, to cut the outer cable
+
+
+		After cutting the outer cable, 8 wires should be there. Orange, orange-white, green, green white, blue, blue white, and brown, brown-white.. They should be interlooped with each other, so seperate them out, keeping them in the folowing order:
+
+			Orange-White
+			Orange
+			Green-White
+			Blue
+			Blue-White
+			Green
+			Brown-White
+			Brown
+
+		Now, cut the wires to make them slightly smaller, keeping a perfect hold of the wires in the above order, insert into the rj45 connector. crimp using the crimper.

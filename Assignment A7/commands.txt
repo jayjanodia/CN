@@ -1,0 +1,66 @@
+select your interface. in terminal type ifconfig, then check name of interface on left. 
+
+For generating arp/ethernet, type arp in console
+For generating ip, type icmp in console, or ping some ip address. check in wireshark to see if it's working.
+For generating tcp, just open your browser and search something.
+For generating udp, open two terminals and open python3 in both of them. one acts as a sender and the other acts as the reciever
+
+
+Sender:
+jay@jay:~$ python3
+Python 3.6.6 (default, Sep 12 2018, 18:26:19) 
+[GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import socket
+>>> sock=socket.socket
+>>> sock
+[1]+  Stopped                 python3
+jay@jay:~$ clear
+jay@jay:~$ python3
+Python 3.6.6 (default, Sep 12 2018, 18:26:19) 
+[GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import socket
+>>> sock = socket.socket(socket.AF_INET,socket.DGRAM)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'socket' has no attribute 'DGRAM'
+>>> sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+>>> help(socket.socket)
+
+>>> sock.bind(('127.0.0.1',6000))
+>>> data , addr = sock.recvfrom(4096)
+>>> print(data , '\n', addr)
+b'hello' 
+ ('127.0.0.1', 35174)
+>>> data , addr = sock.recvfrom(4096)
+>>> print(data , '\n', addr)
+b'hello' 
+ ('127.0.0.1', 35174)
+>>> 
+
+
+Client:
+jay@jay:~$ python3
+Python 3.6.6 (default, Sep 12 2018, 18:26:19) 
+[GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import socket
+>>> sock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+>>> help(socket.socket.sendto)
+
+>>> sock.sendto('hello',('127.0.0.1',6000))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: a bytes-like object is required, not 'str'
+>>> sock.sendto(bytes('hello'),('127.0.0.1',6000))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: string argument without an encoding
+>>> sock.sendto(bytes('hello' , encoding = 'UTF-8'),('127.0.0.1',6000))
+5
+>>> sock.sendto(bytes('hello' , encoding = 'UTF-8'),('127.0.0.1',6000))
+5
+>>> sock.sendto(bytes('hello'),('127.0.0.1',6000))
+
+

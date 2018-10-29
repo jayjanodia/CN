@@ -1,0 +1,40 @@
+Open packet tracer using "packettracer" in terminal
+
+Go to End Devices, drag and drop 2 generic PC's
+
+Go to Network Devices, drag and drop 2 2950T Switches, drag and drop 2 2811 Routers.
+
+Click on one Router.
+    
+    On the next screen that pops up, in Physical device view, click on zoom out, disable the router by clicking on the tiny block 
+    containing a green signal.
+
+    Go to WIC-2T. CLick on the wifi card that's visible and drag and drop it to the Physical device view, where you have 4 black boxes.
+    Do the same for the second router. Make sure to enable the router by clicking on the tiny block sans signal to get signal again.
+
+Go to connections, select copper straight view. We will use this to connect pc to switch and switch to router.
+    
+    Order does not matter. Drag from pc to it's corresponding switch. When you click on pc a mini panel opens up, select fast
+    ethernet from there. Drag to switch. Switch has a default configuration of 24 ports. You can select any port. That port is
+    allocated to the PC.
+    Take another copper straight view. Select a port. This port is allocated to router.Drag wire to router and select fastethernet 0.
+
+In connections itself, select Serial DTE. Note Serial DTE, not Serial DCE. This is used to connect between routers.
+    
+    Click on one router, select a serial. Connect to another router, select any serial. Can be same or different, just remember
+    what you chose, cause we will be using it later. 
+
+Repeat the process done on line 15 of copper straight view for pc and switch 2
+
+Now assign the network ipv4 addresses. Let one network (pc1, switch1, router1) be 192.168.1.0. Let second network be 192.168.2.0
+
+Now assign individual ipv4 addresses to the different components. Just use labels for now.  
+
+Click on the pcs, go to Desktop, ip configuration, in static set ip address, subnet mask, default gateway(router ip via switch) and close the screen
+
+Click on routers, click on config, click on router's respective INTERFACE, set port status on, set ip address via switch and mac address.
+
+        Select respective Serial port, enable port status, enter serial ip and subnet.
+
+        Go to RIP tab, enter the ip and subnet address for the serial and fastethernet you are using together on your router.
+

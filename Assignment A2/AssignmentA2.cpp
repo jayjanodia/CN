@@ -10,7 +10,7 @@ int main()
 	cout<<"Enter number of Data bits you want to enter: "<<endl;
 	cin>>dataBit;
 	m=dataBit;
-	while(m+r+1>pow(r,2))
+	while(m+r+1>pow(2,r))
 	{
 		count++;
 		r=count;
@@ -61,7 +61,7 @@ int main()
 		s=i;
 		min=1;
 		max=i;
-		for(j;j<=m-r;)
+		for(j;j<=m+r;)
 		{
 			for(s=j;max>=min && s<=m+r;min++, s++)
 			{

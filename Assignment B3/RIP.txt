@@ -38,3 +38,4 @@ Click on routers, click on config, click on router's respective INTERFACE, set p
 
         Go to RIP tab, enter the ip and subnet address for the serial and fastethernet you are using together on your router.
 
+That's it. You are ready to run the emulator now. Click on a pc, click on terminal(for linux)/cmd(for windows) and ping other pc.
